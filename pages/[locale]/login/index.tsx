@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import clsx from "clsx";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import { useLoginMutation } from "../../storage/features/auth/service";
+import { useLoginMutation } from "../../../storage/features/auth/service";
 
 type FormData = {
   email: string;
@@ -20,6 +22,8 @@ const schema = yup
   .required();
 
 const Login = () => {
+  const router = useRouter();
+  const query = router.query;
   const [doLogin, { isSuccess }] = useLoginMutation();
   const {
     register,
@@ -29,12 +33,18 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
 
+  useEffect(() => {
+    if (isSuccess) {
+      router.push(`/${query.locale}`);
+    }
+  }, [isSuccess]);
+
   const onSubmit = handleSubmit(({ email, password }) => {
     doLogin({ email, password });
   });
 
   return (
-    <div className="w-screen flex h-screen justify-center items-center">
+    <div className=" flex justify-center items-center">
       <form
         name="loginForm"
         autoComplete="off"

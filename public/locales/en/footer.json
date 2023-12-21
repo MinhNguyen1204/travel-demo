@@ -1,0 +1,12 @@
+{
+  "restaurant":  "Restaurant",
+  "point_of_sales":  "Point of Sales",
+  "kitchen_display_system":  "Kitchen Display System",
+  "digital_order":  "Digital Order",
+  "order_on_table":  "Order On Table",
+  "backend_reporting":  "Backend Reporting",
+  "digital_display":  "Digital Display",
+  "pos_enterprise":  "POS Enterprise",
+  "e_commerce":  "E-Commerce",
+  "call_center":  "Call Center"
+}

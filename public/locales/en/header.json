@@ -1,0 +1,19 @@
+{
+  "pos_cloud": "POS Cloud",
+  "e_commerce": "E-commerce",
+  "pos_enterprise": "POS Enterprise",
+  "call_center": "Call Center",
+  "about_us": "About us",
+  "policy": "Policy",
+
+  "try_it_free": "TRY IT FREE",
+
+  "order_entry": "Order Entry",
+  "kitchen_display_system": "Kitchen Display System",
+  "digital_order": "Digital Order",
+  "order_on_table": "Order On Table",
+  "backend_reporting": "Backend Reporting",
+  "digital_display": "Digital Display",
+  "english": "English",
+  "janpanese": "Japanese"
+}
