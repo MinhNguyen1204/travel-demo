@@ -1,13 +1,13 @@
 import authQuery from "./auth/service";
-import homeQuery from "./home/service";
+import homeQuery from "./post/service";
 import { authSlice } from "./auth";
-import { homeSlice } from "./home";
 import { loaderSlice } from "./loader";
+import { postSlice } from "./post";
 
 export const slices = {
   auth: authSlice,
   loader: loaderSlice,
-  home: homeSlice,
+  post: postSlice,
 };
 
 export const queries = {

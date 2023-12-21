@@ -1,24 +1,25 @@
 /* eslint-disable no-empty-pattern */
 import { createSlice } from "@reduxjs/toolkit";
 
-import homeQuery from "./service";
+import postQuery from "./service";
 
-type HomeState = {
+type PostState = {
   posts: any[];
 };
 
-const initialState: HomeState = {
+const initialState: PostState = {
   posts: [],
 };
 
 const slice = createSlice({
-  name: "home",
+  name: "post",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
-      homeQuery.endpoints.getPosts.matchFulfilled,
+      postQuery.endpoints.getPosts.matchFulfilled,
       (state, action) => {
+        console.log('action: ', action);
         state.posts = action.payload;
       }
     );
@@ -26,4 +27,4 @@ const slice = createSlice({
 });
 
 export const {} = slice.actions;
-export const homeSlice = slice.reducer;
+export const postSlice = slice.reducer;

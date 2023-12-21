@@ -23,6 +23,7 @@
       "@components/*": ["./shared/components/*"],
       "@hooks/*": ["./shared/hooks/*"],
       "@public/*": ["./public/*"],
+      "@features/*": ["./features/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/redirect.js"],

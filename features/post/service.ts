@@ -2,7 +2,7 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 
 import axiosBaseQuery from "../../storage/baseQuery";
 
-const homeQuery = createApi({
+const postQuery = createApi({
   reducerPath: "homeAPI",
   baseQuery: axiosBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com",
@@ -17,6 +17,6 @@ const homeQuery = createApi({
   }),
 });
 
-export default homeQuery;
+export default postQuery;
 
-export const { useGetPostsQuery } = homeQuery;
+export const { useGetPostsQuery } = postQuery;
