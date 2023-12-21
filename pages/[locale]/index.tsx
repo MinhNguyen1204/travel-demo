@@ -14,7 +14,7 @@ const Index = () => {
       </h2>
       <p>
         Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
-        VSCode, PostCSS, Tailwind CSS.
+        RTK, RTK query/Axios, React Hook Form, VSCode, PostCSS, Tailwind CSS.
       </p>
       <h3 className="text-lg font-semibold">Next js Boilerplate Features</h3>
 
@@ -35,6 +35,20 @@ const Index = () => {
           <Link href="https://tailwindcss.com" rel="nofollow">
             Tailwind CSS
           </Link>
+        </li>
+        <li>
+          <p></p>
+          <span role="img" aria-label="art">
+            🎨
+          </span>{" "}
+          Redux Toolkit for management state,
+        </li>
+        <li>
+          <p></p>
+          <span role="img" aria-label="art">
+            🎨
+          </span>{" "}
+          Redux Toolkit Query with customize Axios for fetching data,
         </li>
         <li>
           <span role="img" aria-label="nail_care">

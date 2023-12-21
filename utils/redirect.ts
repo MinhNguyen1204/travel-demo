@@ -5,7 +5,7 @@ import nextI18nextConfig from "../next-i18next.config";
 
 import languageDetector from "./languageDetector";
 
-export const useRedirect = (to) => {
+export const useRedirect = () => {
   const router = useRouter();
 
   // language detection
@@ -14,15 +14,15 @@ export const useRedirect = (to) => {
     if (!nextI18nextConfig.i18n.locales.includes(detectedLng)) {
       detectedLng = nextI18nextConfig.i18n.defaultLocale;
     }
-    languageDetector.cache(detectedLng);
+    (languageDetector as LanguageDetector).cache(detectedLng, undefined);
     router.replace("/" + detectedLng);
   });
 
-  return <></>;
+  return null;
 };
 
 export const Redirect = () => {
   useRedirect();
-  return <></>;
+  return null;
 };
 
