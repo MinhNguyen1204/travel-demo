@@ -36,7 +36,7 @@ const MainLayout = (props: IMainProps) => {
                 </Link>
               </li>
               <li className="mr-6">
-                <Link href={`/${currentLocale}/blog`} className="border-none">
+                <Link href={`/${currentLocale}/blog/1`} className="border-none">
                   Blog
                 </Link>
               </li>

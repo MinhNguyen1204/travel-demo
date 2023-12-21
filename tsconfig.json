@@ -21,6 +21,8 @@
     "paths": {
       "@styles/*":["./styles/*"],
       "@components/*": ["./shared/components/*"],
+      "@hooks/*": ["./shared/hooks/*"],
+      "@public/*": ["./public/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
