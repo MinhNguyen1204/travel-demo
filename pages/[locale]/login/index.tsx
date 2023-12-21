@@ -44,7 +44,7 @@ const Login = () => {
   });
 
   return (
-    <div className=" flex justify-center items-center">
+    <div className="h-screen w-screen flex justify-center items-center">
       <form
         name="loginForm"
         autoComplete="off"
@@ -116,3 +116,8 @@ const Login = () => {
 };
 
 export default Login;
+
+Login.getLayout = (page: React.ReactElement) => {
+  console.log("get lay out");
+  return page;
+};
