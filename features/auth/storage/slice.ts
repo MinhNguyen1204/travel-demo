@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import authQuery from "./service";
+import authQuery from "../services";
 
 export type AuthState = {
   user: any | null;

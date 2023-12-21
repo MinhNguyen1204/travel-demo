@@ -24,6 +24,7 @@
       "@hooks/*": ["./shared/hooks/*"],
       "@public/*": ["./public/*"],
       "@features/*": ["./features/*"],
+      "@storage/*": ["./storage/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/redirect.js"],

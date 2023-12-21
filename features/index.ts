@@ -1,17 +1,16 @@
-import authQuery from "./auth/service";
-import homeQuery from "./post/service";
+import authQuery from "./auth/services";
+import postQuery from "./post/services";
 import { authSlice } from "./auth";
-import { loaderSlice } from "./loader";
 import { postSlice } from "./post";
 
 export const slices = {
   auth: authSlice,
-  loader: loaderSlice,
   post: postSlice,
 };
 
 export const queries = {
   [authQuery.reducerPath]: authQuery.reducer,
+  [postQuery.reducerPath]: postQuery.reducer,
 };
 
-export const middlewares = [authQuery.middleware, homeQuery.middleware];
+export const middlewares = [authQuery.middleware, postQuery.middleware];

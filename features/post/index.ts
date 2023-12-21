@@ -1,2 +1,2 @@
-export * from "./selector";
-export * from "./slice";
+export * from "./storage/selector";
+export * from "./storage/slice";

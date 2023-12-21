@@ -1,4 +1,4 @@
-import { RootState } from "../../storage/store";
+import { RootState } from "@storage/store";
 
 export const getIsAuthenticated = (state: RootState) => {
   const token = localStorage.getItem("token");
