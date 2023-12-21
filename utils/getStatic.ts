@@ -16,16 +16,16 @@ export const getStaticPaths = () => ({
   paths: getI18nPaths(),
 });
 
-export async function getI18nProps(ctx) {
+export async function getI18nProps(ctx: any) {
   const locale = ctx?.params?.locale || "en";
-  let props = {
+  const props: any = {
     ...(await serverSideTranslations(locale)),
   };
   return props;
 }
 
 export function makeStaticProps() {
-  return async function getStaticProps(ctx) {
+  return async function getStaticProps(ctx: any) {
     return {
       props: await getI18nProps(ctx),
     };
