@@ -1,7 +1,8 @@
 /* eslint-disable no-empty-pattern */
 import { createSlice } from "@reduxjs/toolkit";
 
-import postQuery from "./service";
+import postQuery from "../services";
+
 
 type PostState = {
   posts: any[];
@@ -19,7 +20,6 @@ const slice = createSlice({
     builder.addMatcher(
       postQuery.endpoints.getPosts.matchFulfilled,
       (state, action) => {
-        console.log('action: ', action);
         state.posts = action.payload;
       }
     );
