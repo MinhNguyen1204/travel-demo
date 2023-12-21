@@ -8,8 +8,9 @@ import { combineReducers } from "redux";
 
 import { configureStore } from "@reduxjs/toolkit";
 
+import { middlewares, queries, slices } from "../features";
+
 import { rtkQueryErrorLogger } from "./middlewares/errorToast";
-import { middlewares, queries, slices } from "./features";
 
 export const rootReducer = combineReducers({
   ...slices,
@@ -19,7 +20,6 @@ export const rootReducer = combineReducers({
 export const makeStore = () => {
   return configureStore({
     reducer: rootReducer,
-
     middleware: (gDM) => gDM().concat(...middlewares, rtkQueryErrorLogger),
   });
 };

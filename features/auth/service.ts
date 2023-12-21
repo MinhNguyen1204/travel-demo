@@ -1,6 +1,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 
-import axiosBaseQuery from "../../baseQuery";
+import axiosBaseQuery from "../../storage/baseQuery";
+
 
 interface UserInfo {
   email: string;
@@ -14,14 +15,14 @@ const authQuery = createApi({
   }),
   endpoints: (builder) => ({
     login: builder.mutation<{ token: string }, Partial<UserInfo>>({
-      query: (credentials) => ({
+      query: (credentials: UserInfo) => ({
         url: "login",
         method: "POST",
         data: credentials,
       }),
     }),
     register: builder.mutation<UserInfo, UserInfo>({
-      query: (credentials) => ({
+      query: (credentials: UserInfo) => ({
         url: "register",
         method: "POST",
         data: credentials,

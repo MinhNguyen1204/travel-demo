@@ -7,7 +7,8 @@ import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import { useLoginMutation } from "../../../storage/features/auth/service";
+import { useLoginMutation } from "../../../features/auth/service";
+
 
 type FormData = {
   email: string;
