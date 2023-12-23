@@ -5,5 +5,5 @@ import { RootState } from "../../store";
 import { LoaderState } from "./slice";
 
 export const getLoaderState: Selector<RootState, LoaderState> = (
-  state: RootState
+  state: RootState,
 ) => state.loader;

@@ -15,7 +15,6 @@ type IBlogUrl = {
 
 interface IProps {
   slug: string;
-
 }
 const Blog = ({ slug }: IProps) => {
   const { t } = useTypedTranslation();
@@ -39,16 +38,9 @@ const Blog = ({ slug }: IProps) => {
 
 export default Blog;
 
-
 export const getStaticPaths: GetStaticPaths<IBlogUrl> = async (ctx) => {
-
-
   return {
-
-    paths: [
-      { params: { locale: "jp", slug: "1" }, },
-
-    ],
+    paths: [{ params: { locale: "jp", slug: "1" } }],
     fallback: "blocking",
   };
 };
@@ -58,7 +50,7 @@ export const getStaticProps: any = async (ctx: any) => {
     props: {
       slug: ctx.params!.slug,
 
-      ...await getI18nProps(ctx)
+      ...(await getI18nProps(ctx)),
     },
   };
 };

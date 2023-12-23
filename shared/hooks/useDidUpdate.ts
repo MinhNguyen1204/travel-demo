@@ -1,13 +1,6 @@
-
-
 import { useEffect, useRef } from "react";
 
-
-const useDidUpdate = (
-  fn: () => void,
-  deps: React.DependencyList = [],
-
-) => {
+const useDidUpdate = (fn: () => void, deps: React.DependencyList = []) => {
   const mounted = useRef<boolean>(false);
 
   useEffect(() => {
@@ -16,7 +9,6 @@ const useDidUpdate = (
       return;
     }
     fn();
-
   }, deps);
 
   return null;

@@ -63,7 +63,7 @@ const LoginForm = () => {
           {...register("email")}
           className={clsx(
             "shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none",
-            errors.email && "border-red-500 focus:border-red-500"
+            errors.email && "border-red-500 focus:border-red-500",
           )}
         />
         {errors.email && (
@@ -83,7 +83,7 @@ const LoginForm = () => {
           {...register("password")}
           className={clsx(
             "shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none",
-            errors.password && "border-red-500 focus:border-red-500"
+            errors.password && "border-red-500 focus:border-red-500",
           )}
         />
         {errors.password && (

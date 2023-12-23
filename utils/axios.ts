@@ -1,6 +1,4 @@
-
 import axios, { AxiosInstance, AxiosResponse } from "axios";
-
 
 export const headers = {
   "Content-Type": "application/json",
@@ -25,7 +23,7 @@ instance.interceptors.request.use(
   function (error) {
     // Do something with request error
     return Promise.reject(error);
-  }
+  },
 );
 
 // Add a response interceptor
@@ -40,7 +38,7 @@ instance.interceptors.response.use(
     const { data, status, message } = error.response;
 
     return Promise.reject(error);
-  }
+  },
 );
 
 export default instance;
