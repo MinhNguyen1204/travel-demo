@@ -6,8 +6,7 @@ interface IProps {
   children: React.ReactNode;
 }
 const Button = ({ className, disabled, children }: IProps) => {
-
-  const handleClick = () => { };
+  const handleClick = () => {};
 
   return (
     <button className="xx" onClick={handleClick}>

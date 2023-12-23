@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import postQuery from "../services";
 
-
 type PostState = {
   posts: any[];
 };
@@ -21,7 +20,7 @@ const slice = createSlice({
       postQuery.endpoints.getPosts.matchFulfilled,
       (state, action) => {
         state.posts = action.payload;
-      }
+      },
     );
   },
 });

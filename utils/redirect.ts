@@ -25,4 +25,3 @@ export const Redirect = () => {
   useRedirect();
   return null;
 };
-

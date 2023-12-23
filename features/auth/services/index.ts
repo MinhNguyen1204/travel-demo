@@ -1,7 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import axiosBaseQuery from "@storage/baseQuery";
 
-
 interface UserInfo {
   email: string;
   password: string;

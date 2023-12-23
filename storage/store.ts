@@ -13,7 +13,6 @@ import { middlewares, queries, slices } from "../features";
 import { rtkQueryErrorLogger } from "./middlewares/errorToast";
 
 export const rootReducer = combineReducers({
-  
   ...slices,
   ...queries,
 });

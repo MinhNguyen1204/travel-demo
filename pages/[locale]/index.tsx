@@ -125,4 +125,3 @@ export default Index;
 
 const getStaticProps = makeStaticProps(["home"]);
 export { getStaticPaths, getStaticProps };
-

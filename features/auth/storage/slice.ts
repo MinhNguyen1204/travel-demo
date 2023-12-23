@@ -31,7 +31,7 @@ const slice = createSlice({
         state.isAuthenticated = true;
         state.user = { ...action.payload };
         localStorage.setItem("token", action.payload.token);
-      }
+      },
     );
   },
 });

@@ -43,4 +43,3 @@ const Meta = (props: IMetaProps) => {
 };
 
 export { Meta };
-
